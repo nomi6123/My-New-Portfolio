@@ -1,5 +1,6 @@
 import React from "react";
 import { FaLinkedin, FaGithub, FaGlobe } from "react-icons/fa";
+import Link from "next/link";
 
 const Footer = () => {
   return (
@@ -42,6 +43,12 @@ const Footer = () => {
         <p className="text-xs text-gray-400">
           &copy; {new Date().getFullYear()} M Noman. All rights reserved.
         </p>
+        
+        <div className="mt-4">
+          <Link href="/Privacy" legacyBehavior>
+            <a className="text-[17px] font-semibold text-gray-400 hover:text-fuchsia-400">Privacy Policy</a>
+          </Link>
+        </div>
       </div>
     </footer>
   );
