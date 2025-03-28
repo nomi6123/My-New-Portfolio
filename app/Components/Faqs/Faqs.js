@@ -58,7 +58,7 @@ export default function FAQSection() {
 
   return (
     <section className="  mx-auto p-6 bg-black text-black  mb-1 shadow-lg">
-      <h2 className="text-3xl font-bold text-center mb-6">
+      <h2 className="text-3xl text-white font-bold text-center mb-6">
         Frequently Asked Questions
       </h2>
       <div className="space-y-4 flex justify-center items-center flex-col">
