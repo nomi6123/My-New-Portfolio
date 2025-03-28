@@ -9,6 +9,8 @@ import Clients from "./Components/Clients/Clients";
 import Contact from "./Components/Contact/Contact";
 import Home from "./Components/Home/Home";
 import About from "./Components/About/About";
+import FAQSection from "./Components/Faqs/Faqs";
+import BlogPage from "./Components/Blog/Blog";
 
 const page = () => {
   return (
@@ -22,6 +24,8 @@ const page = () => {
 
       <Clients />
       <Contact />
+      <FAQSection/>
+      <BlogPage/>
       <Footer />
     </div>
   );
