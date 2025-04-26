@@ -57,36 +57,42 @@ export default function FAQSection() {
   };
 
   return (
-    <section className="  mx-auto p-6 bg-black text-black  mb-1 shadow-lg">
-      <h2 className="text-3xl text-white font-bold text-center mb-6">
-        Frequently Asked Questions
-      </h2>
-      <div className="space-y-4 flex justify-center items-center flex-col">
-        {faqs.map((faq, index) => (
-          <div
-            key={index}
-            className="w-[90%] border border-transparent bg-white text-black
-             rounded-lg p-2 transition-all duration-300
-              hover:border-fuchsia-500 hover:bg-gray-800 group "
-          >
-            <button
-              onClick={() => toggleFAQ(index)}
-              className="w-full text-left flex justify-between text-black
-               items-center text-lg font-semibold py-2
-               transition-all duration-300  hover:text-purple-400"
+    <section className="relative mx-auto p-6 bg-[url('/faqs-1.jpg')] bg-cover bg-no-repeat text-black shadow-lg">
+      {/* Blackish Overlay */}
+      <div className="absolute inset-0 bg-black/70 z-0" />
+
+      {/* FAQ Content */}
+      <div className="relative z-10">
+        <h2 className="text-3xl text-white font-bold text-center mb-6">
+          Frequently Asked Questions
+        </h2>
+        <div className="space-y-4 flex justify-center items-center flex-col">
+          {faqs.map((faq, index) => (
+            <div
+              key={index}
+              className="w-[90%] border border-transparent bg-white text-black
+               rounded-lg p-2 transition-all duration-300
+                hover:border-fuchsia-500 hover:bg-opacity-70 hover:bg-black group"
             >
-              {faq.question}
-              <span className="text-xl text-black transition-all duration-300">
-                {openIndex === index ? "−" : "+"}
-              </span>
-            </button>
-            {openIndex === index && (
-              <p className="mt-2 group-hover:text-white transition-all duration-300">
-                {faq.answer}
-              </p>
-            )}
-          </div>
-        ))}
+              <button
+                onClick={() => toggleFAQ(index)}
+                className="w-full text-left flex justify-between text-black
+                 items-center text-lg font-semibold py-2
+                 transition-all duration-300 group-hover:text-purple-400"
+              >
+                {faq.question}
+                <span className="text-xl text-black group-hover:text-white transition-all duration-300">
+                  {openIndex === index ? "−" : "+"}
+                </span>
+              </button>
+              {openIndex === index && (
+                <p className="mt-2 group-hover:text-white transition-all duration-300">
+                  {faq.answer}
+                </p>
+              )}
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );

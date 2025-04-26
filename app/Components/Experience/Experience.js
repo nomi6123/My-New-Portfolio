@@ -8,50 +8,74 @@ const projects = [
   {
     id: 1,
     name: "My Hostit",
-    technologies: "MERN Stack",
+    technologies: "Explore the world by clicking on the image.",
     image: "/hostit.png",
     link: "https://my-hostit.vercel.app",
   },
   {
     id: 2,
-    name: "Matter js",
-    technologies: "MERN Stack",
-    image: "/matter js.png",
-    link: "https://matter-js-portfolio.vercel.app",
+    name: "Finexo",
+    technologies: "Explore the world by clicking on the image.",
+    image: "/Finexo.png",
+    link: "https://finexo-pearl.vercel.app",
   },
   {
     id: 3,
-    name: "Finter For Welder",
-    technologies: "MERN Stack",
-    image: "/finter.png",
-    link: "https://finter-for-welder.vercel.app",
+    name: "Web Agency",
+    technologies: "Explore the world by clicking on the image.",
+    image: "/webing.png",
+    link: "https://web-agency-brown.vercel.app",
   },
   {
     id: 4,
-    name: "Guards",
-    technologies: "MERN Stack",
-    image: "/guards.png",
-    link: "https://my-guard.vercel.app",
-  },
-  {
-    id: 5,
     name: "Carint",
-    technologies: "MERN Stack",
+    technologies: "Explore the world by clicking on the image.",
     image: "/carint.png",
     link: "https://carint-transportservices.vercel.app",
   },
   {
-    id: 6,
+    id: 5,
     name: "Healet",
-    technologies: "MERN Stack",
+    technologies: "Explore the world by clicking on the image.",
     image: "/healet.png",
     link: "https://healet-for-jewellry.vercel.app",
+  },
+  {
+    id: 6,
+    name: "Car Industry",
+    technologies: "Explore the world by clicking on the image.",
+    image: "/car.png",
+    link: "https://my-car-industry.vercel.app",
+  },
+  {
+    id: 7,
+    name: "Matter js",
+    technologies: "Explore the world by clicking on the image.",
+    image: "/matter js.png",
+    link: "https://matter-js-portfolio.vercel.app",
+  },
+  {
+    id: 8,
+    name: "Finter For Welder",
+    technologies: "Explore the world by clicking on the image.",
+    image: "/finter.png",
+    link: "https://finter-nextjs.vercel.app",
+  },
+  {
+    id: 9,
+    name: "Guards",
+    technologies: "Explore the world by clicking on the image.",
+    image: "/guards.png",
+    link: "https://my-guard.vercel.app",
   },
 ];
 
 const Experience = () => {
   return (
-    <div className="relative bg-[url('/sk.jpg')] bg-cover bg-no-repeat text-white py-20" id="Experience">
+    <div
+      className="relative bg-[url('/sk.jpg')] bg-cover bg-no-repeat text-white py-20"
+      id="Experience"
+    >
       {/* Black Overlay */}
       <div className="absolute inset-0 bg-black bg-opacity-80"></div>
 
@@ -72,13 +96,13 @@ const Experience = () => {
                     <Image
                       src={item.image}
                       alt={item.name}
-                      width={500}
+                      width={600}
                       height={300}
-                      className="rounded-lg mb-4 w-full h-48 object-cover"
+                      className="rounded-lg mb-4 w-full h-48  object-contain"
                     />
                   )}
                   <h3 className="font-bold text-2xl mb-2">{item.name}</h3>
-                  <p className="text-gray-400 mb-4">{item.technologies}</p>
+                  <p className="text-white  mb-4">{item.technologies}</p>
                 </div>
               </Link>
             </motion.div>

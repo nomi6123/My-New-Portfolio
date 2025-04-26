@@ -8,7 +8,7 @@ const Footer = () => {
       <div className="max-w-4xl mx-auto">
         <h2 className="text-3xl font-bold mb-4 text-white uppercase">Muhammad Noman</h2>
         <p className="text-sm mb-2">
-          Web Developer | Graphic Designer | Audio & Video Editor
+          Web Developer | Graphic Designer | Audio & Video Editor | MS Office Expert | Inpage Pro
         </p>
 
         <div className="flex justify-center space-x-4 mb-4">
@@ -46,7 +46,7 @@ const Footer = () => {
         
         <div className="mt-4">
           <Link href="/Privacy" legacyBehavior>
-            <a className="text-[17px] font-semibold text-gray-400 hover:text-fuchsia-400">Privacy Policy</a>
+            <a className="text-[17px] font-semibold text-white hover:text-fuchsia-400">Privacy Policy</a>
           </Link>
         </div>
       </div>

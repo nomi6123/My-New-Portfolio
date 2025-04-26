@@ -11,7 +11,7 @@ const Education = () => {
         {/* Heading */}
         <div className="relative w-full flex justify-center items-center mt-10">
           <h2 className="text-3xl text-white uppercase tracking-tighter font-bold">
-            Education
+            My Education
           </h2>
         </div>
 
