@@ -16,7 +16,7 @@ const projects = [
     id: 2,
     name: "Finexo",
     technologies: "Explore the world by clicking on the image.",
-    image: "/Finexo.png",
+    image: "/finexo.png",
     link: "https://finexo-pearl.vercel.app",
   },
   {
