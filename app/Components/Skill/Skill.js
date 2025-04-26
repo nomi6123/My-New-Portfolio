@@ -3,16 +3,19 @@ import React from "react";
 import { motion } from "framer-motion";
 
 const skills = [
-  { name: "HTML & CSS", level: 90 },
+  { name: "HTML & CSS", level: 95 },
   { name: "React Js", level: 87 },
   { name: "Next Js", level: 89 },
-  { name: "Node Js", level: 20 },
+  { name: "Node Js", level: 24 },
+  { name: "PhotoEditer", level: 95 },
+
 ];
 
 const additionalSkills = [
   { name: "Graphic Designer", level: 95 },
   { name: "Video Editor", level: 90 },
-  { name: "Audio Editor", level: 75 },
+  { name: "Audio Editor", level: 97 },
+  { name: "MS Office Expert", level: 95 },
 ];
 
 const Skill = () => {
