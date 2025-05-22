@@ -44,62 +44,63 @@ export default function BlogPage() {
   };
 
   return (
-    <section className="relative max-w-full min-h-screen flex justify-center items-center flex-col mx-auto p-6 bg-[url('/blog.jpg')] bg-cover bg-no-repeat text-white">
-      {/* Overlay */}
-      <div className="absolute inset-0 bg-black/60 z-0" />
+  <section className="relative max-w-full min-h-screen flex justify-center items-center flex-col mx-auto p-6 bg-[url('/blog.jpg')] bg-cover bg-no-repeat text-white">
+    {/* Overlay */}
+    <div className="absolute inset-0 bg-black/60 z-0" />
 
-      {/* Content */}
-      <div className="relative z-10 w-full">
-        <h1 className="text-4xl font-bold text-center mb-8">
-          Blog - Insights & Tutorials
-        </h1>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {blogPosts.map((post, index) => (
-            <motion.div
-              key={index}
-              className="bg-black  rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300"
-              initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: 1, y: 0 }}
-              whileHover={{ scale: 1.05 }}
-              transition={{ duration: 0.4 }}
-            >
-              <Image
-                src={post.image}
-                alt={post.title}
-                width={500}
-                height={300}
-                className="w-full h-48 object-cover"
-              />
-              <div className="p-4">
-                <h2 className="text-xl font-semibold hover:text-purple-400 cursor-pointer">
-                  {post.title}
-                </h2>
-                <p className="text-gray-400 text-sm mt-2">{post.description}</p>
-                <p className="text-white font-bold text-xs mt-3">
-                  By {post.author} | {post.date}
-                </p>
-                <button
-                  className="mt-4 text-purple-500 hover:underline focus:outline-none"
-                  onClick={() => toggleDropdown(index)}
+    {/* Content */}
+    <div className="relative z-10 w-full max-w-[1360px] mx-auto">
+      <h1 className="text-4xl font-bold text-center mb-8">
+        Blog - Insights & Tutorials
+      </h1>
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {blogPosts.map((post, index) => (
+          <motion.div
+            key={index}
+            className="bg-black rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300"
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            whileHover={{ scale: 1.05 }}
+            transition={{ duration: 0.4 }}
+          >
+            <Image
+              src={post.image}
+              alt={post.title}
+              width={500}
+              height={300}
+              className="w-full h-48 object-cover"
+            />
+            <div className="p-4">
+              <h2 className="text-xl font-semibold hover:text-purple-400 cursor-pointer">
+                {post.title}
+              </h2>
+              <p className="text-gray-400 text-sm mt-2">{post.description}</p>
+              <p className="text-white font-bold text-xs mt-3">
+                By {post.author} | {post.date}
+              </p>
+              <button
+                className="mt-4 text-purple-500 hover:underline focus:outline-none"
+                onClick={() => toggleDropdown(index)}
+              >
+                Read More {openIndex === index ? "▲" : "▼"}
+              </button>
+              {openIndex === index && (
+                <motion.div
+                  className="mt-3 p-3 bg-gray-800 rounded text-gray-300"
+                  initial={{ opacity: 0, height: 0 }}
+                  animate={{ opacity: 1, height: "auto" }}
+                  exit={{ opacity: 0, height: 0 }}
+                  transition={{ duration: 0.3 }}
                 >
-                  Read More {openIndex === index ? "▲" : "▼"}
-                </button>
-                {openIndex === index && (
-                  <motion.div
-                    className="mt-3 p-3 bg-gray-800 rounded text-gray-300"
-                    initial={{ opacity: 0, height: 0 }}
-                    animate={{ opacity: 1, height: "auto" }}
-                    exit={{ opacity: 0, height: 0 }}
-                    transition={{ duration: 0.3 }}
-                  >
-                    {post.details}
-                  </motion.div>
-                )}
-              </div>
-            </motion.div>
-          ))}
-        </div>
+                  {post.details}
+                </motion.div>
+              )}
+            </div>
+          </motion.div>
+        ))}
       </div>
-    </section>
-  );
+    </div>
+  </section>
+);
+
 }
