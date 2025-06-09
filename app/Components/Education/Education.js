@@ -47,7 +47,7 @@ const Education = () => {
             border-color: transparent transparent transparent blue;
           }
           100% {
-            border-color: transparent transparent green transparent;
+            border-color: transparent transparent blue transparent;
           }
         }
         .animate-border-move {
@@ -60,24 +60,24 @@ const Education = () => {
 
 const educationData = [
   {
-    degree: "Matriculation Master's Degree",
-    university: "Govt Model High School",
-    location: "Bhakkar Panjab, PAKISTAN",
+    degree: "Training in Website Development",
+    university: "Athena Sols ",
+    location: "Bhakkar Panjab, Pakistan",
     description:
-      "Advanced studies in computer science and software development.",
+      "Advanced studies in Website development, Graphic Designing, Video & Audio Editing.",
   },
   {
     degree: "Intermediate F.Sc",
     university: "Govt. Post Graduate College",
-    location: "Bhakkar Panjab, PAKISTAN",
+    location: "Bhakkar Panjab, Pakistan",
     description:
-      "Foundation in programming, algorithms, and software engineering.",
+      "Foundation in Physics, Chemistry & Biology.",
   },
   {
-    degree: "Bachelor of Creative Design",
-    university: "University of Thal",
-    location: "Bhakkar Panjab, PAKISTAN",
-    description: "Specialization in UI/UX design and creative digital media.",
+    degree: "Certified In Computer Operator",
+    university: "Vocational Training Insititute",
+    location: "Bhakkar Panjab, Pakistan",
+    description: "Specialization in UI/UX design, Ms Office, Inpage & Typing Skills.",
   },
 ];
 

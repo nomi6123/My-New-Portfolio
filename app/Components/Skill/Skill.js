@@ -7,14 +7,15 @@ const skills = [
   { name: "React Js", level: 87 },
   { name: "Next Js", level: 89 },
   { name: "Node Js", level: 24 },
-  { name: "PhotoEditer", level: 95 },
+  { name: "PhotoEditing", level: 95 },
 ];
 
 const additionalSkills = [
   { name: "Graphic Designer", level: 95 },
-  { name: "Video Editor", level: 90 },
-  { name: "Audio Editor", level: 97 },
+  { name: "Video Editing", level: 90 },
+  { name: "Audio Editing", level: 97 },
   { name: "MS Office Expert", level: 95 },
+  { name: "Typing Skill", level: 90 },
 ];
 
 const Skill = () => {
