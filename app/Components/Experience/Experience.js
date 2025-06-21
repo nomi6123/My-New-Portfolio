@@ -301,7 +301,7 @@ const Experience = () => {
           </motion.div>
           
           <motion.h1
-            className="text-6xl md:text-8xl lg:text-9xl font-black text-transparent bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text mb-8 leading-tight"
+            className="text-4xl md:text-6xl lg:text-7xl font-black text-transparent bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text mb-8 leading-tight"
             animate={{
               backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"],
             }}
@@ -355,7 +355,7 @@ const Experience = () => {
             >
               <div className="relative p-8 rounded-2xl bg-gradient-to-br from-gray-900/50 to-purple-900/30 backdrop-blur-xl border border-gray-700/30 hover:border-purple-500/50 transition-all duration-300">
                 <motion.div
-                  className="text-4xl md:text-5xl font-black text-transparent bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text mb-2"
+                  className="text-3xl md:text-4xl font-black text-transparent bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text mb-2"
                   whileHover={{ scale: 1.1 }}
                 >
                   {stat.number}

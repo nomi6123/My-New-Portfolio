@@ -8,7 +8,7 @@ const blogPosts = [
     title: "Mastering React.js for Modern Web Development",
     description:
       "A comprehensive guide to becoming proficient in React.js, covering components, state management, and best practices.",
-    image: "/blog-1.jpg",
+    image: "/blog1.jpg",
     details:
       "React.js is a powerful JavaScript library used for building interactive user interfaces. In this guide, you'll learn about React components, hooks, state management, and best practices to create scalable applications.",
     date: "March 28, 2025",
@@ -18,7 +18,7 @@ const blogPosts = [
     title: "How to Create Stunning UI/UX Designs for Your Website",
     description:
       "Learn the principles of UI/UX design and how to apply them to build visually appealing and user-friendly interfaces.",
-    image: "/blog-2.jpg",
+    image: "/blog2.jpg",
     details:
       "Good UI/UX design enhances user experience and engagement. This blog explores the fundamentals of color theory, typography, wireframing, and usability testing to create stunning interfaces.",
     date: "March 20, 2025",
@@ -28,7 +28,7 @@ const blogPosts = [
     title: "AI-Powered Web Apps: The Future of Development",
     description:
       "An in-depth look at how AI is transforming web applications, with examples of AI-driven features you can implement today.",
-    image: "/blog-3.jpg",
+    image: "/blog3.jpg",
     details:
       "Artificial Intelligence is revolutionizing web development. Learn how AI-powered chatbots, recommendation systems, and image recognition are shaping the future of digital experiences.",
     date: "March 10, 2025",
