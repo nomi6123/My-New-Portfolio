@@ -44,7 +44,7 @@ export default function BlogPage() {
   };
 
   return (
-    <section className="relative min-h-screen bg-[url('/blog.jpg')] bg-cover bg-no-repeat bg-center">
+    <section id="blog" className="relative min-h-screen flex justify-center items-center bg-[url('/blog.jpg')] bg-cover bg-no-repeat bg-center">
       {/* Dynamic Gradient Overlay */}
       <div className="absolute inset-0 bg-gradient-to-br from-black/80 via-purple-900/30 to-black/90" />
       

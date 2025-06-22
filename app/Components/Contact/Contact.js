@@ -65,7 +65,7 @@ const Contact = () => {
   };
 
   return (
-    <section className="relative min-h-screen py-20 bg-cover bg-center bg-no-repeat bg-[url('/c-1.jpg')]" id="Contact">
+    <section className="relative min-h-screen flex justify-center items-center py-20 bg-cover bg-center bg-no-repeat bg-[url('/c-1.jpg')]" id="Contact">
       {/* Animated background overlay */}
       <div className="absolute inset-0 bg-gradient-to-br from-black/90 via-purple-900/30 to-black/90"></div>
       

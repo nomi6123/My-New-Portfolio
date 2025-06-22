@@ -58,7 +58,7 @@ export default function FAQSection() {
   };
 
   return (
-    <section className="relative mx-auto p-6 bg-[url('/faqs-1.jpg')] bg-cover bg-fixed bg-center min-h-screen overflow-hidden">
+    <section className="relative mx-auto flex justify-center items-center p-6 bg-[url('/faqs-1.jpg')] bg-cover bg-fixed bg-center min-h-screen overflow-hidden">
       {/* Enhanced gradient overlay */}
       <div className="absolute inset-0 bg-gradient-to-br from-[#0f0c29]/90 via-[#302b63]/30 to-[#24243e]/90 z-0" />
 

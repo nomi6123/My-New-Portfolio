@@ -3,11 +3,11 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 
 const clients = [
-  { name: "Google", logo: "/c1.png" },
-  { name: "Amazon", logo: "/c2.png" },
-  { name: "Facebook", logo: "/c3.png" },
-  { name: "Microsoft", logo: "/c4.png" },
-  { name: "Netflix", logo: "/c5.png" },
+  { name: "Cisco", logo: "/c1.png" },
+  { name: "StateStreet", logo: "/c2.png" },
+  { name: "KinderMorgan", logo: "/c3.png" },
+  { name: "Gilead", logo: "/c4.png" },
+  { name: "Ubisoft", logo: "/c5.png" },
 ];
 
 const Clients = () => {
