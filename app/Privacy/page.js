@@ -151,8 +151,8 @@ const page = () => {
                   If you have any questions about our privacy policy or how we handle your data, 
                   feel free to reach out to us. We're committed to transparency and will address any concerns promptly.
                 </p>
-                <div className="mt-6 p-4 bg-white/5 rounded-xl border border-white/10">
-                  <p className="text-cyan-400 font-semibold">
+                <div className="mt-6 p-3 bg-black/50 rounded-xl border border-white/10">
+                  <p className="text-cyan-400 break-words font-semibold">
                     📧 noman1137chaya4048@gmail.com
                   </p>
                 </div>
