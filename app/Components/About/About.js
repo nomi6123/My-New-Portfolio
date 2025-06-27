@@ -65,11 +65,11 @@ const About = () => {
                             <div className='absolute inset-0 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl blur-lg opacity-0 group-hover:opacity-75 transition-opacity duration-500'></div>
                             <div className='relative bg-gradient-to-r from-purple-600/20 to-pink-600/20 p-1 rounded-2xl border border-purple-500/30'>
                                 <Image
-                                    src="/hero.png"
+                                    src="/hero-1.jpg"
                                     alt="M Noman"
                                     width={200}
                                     height={200}
-                                    className='rounded-xl w-48 h-48 object-cover'
+                                    className='rounded-xl w-52 h-fit object-cover'
                                 />
                             </div>
                             {/* Floating Elements */}
