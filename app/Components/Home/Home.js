@@ -142,7 +142,7 @@ const Home = () => {
 
                 {/* Professional Tags */}
                 <div className="flex flex-wrap justify-center gap-2 mt-8">
-                    {['Frontend Developer', 'React Expert', 'UI/UX Designer', 'Web Developer'].map((tag, index) => (
+                    {['Frontend Developer', 'React Expert', 'Next Expert', 'UI/UX Designer', 'Web Developer'].map((tag, index) => (
                         <div 
                             key={tag}
                             className="bg-white/5 backdrop-blur-md border border-white/10 px-3 py-1 rounded-full text-gray-300 text-xs font-medium hover:border-fuchsia-500/30 hover:text-fuchsia-400 transition-all duration-300 transform hover:scale-105"
