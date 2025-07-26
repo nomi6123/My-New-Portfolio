@@ -62,26 +62,17 @@ export default function FAQSection() {
       {/* Enhanced gradient overlay */}
       <div className="absolute inset-0 bg-gradient-to-br from-[#0f0c29]/90 via-[#302b63]/30 to-[#24243e]/90 z-0" />
 
-      {/* Animated particles */}
+      {/* Simplified background particles - reduced from 40 to 15 */}
       <div className="absolute inset-0 overflow-hidden">
-        {[...Array(40)].map((_, i) => (
-          <motion.div
+        {[...Array(15)].map((_, i) => (
+          <div
             key={i}
-            className="absolute w-1 h-1 bg-white rounded-full opacity-20"
-            animate={{
-              y: [0, -100, 0],
-              x: [0, Math.sin(i) * 20, 0],
-              opacity: [0.2, 0.8, 0.2],
-            }}
-            transition={{
-              duration: 4 + Math.random() * 3,
-              repeat: Infinity,
-              ease: "easeInOut",
-              delay: Math.random() * 2,
-            }}
+            className="absolute w-1 h-1 bg-white rounded-full opacity-10 animate-pulse"
             style={{
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`,
+              animationDelay: `${Math.random() * 2}s`,
+              animationDuration: `${2 + Math.random() * 1}s`
             }}
           />
         ))}
@@ -90,73 +81,49 @@ export default function FAQSection() {
       {/* FAQ Content */}
       <div className="relative z-10 max-w-5xl mx-auto py-20">
         <motion.div
-          initial={{ opacity: 0, y: -50 }}
+          initial={{ opacity: 0, y: -30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
-          viewport={{ once: false }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
           className="text-center mb-20"
         >
-          <motion.div
-            initial={{ scale: 0 }}
-            whileInView={{ scale: 1 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="inline-block mb-6"
-          >
+          <div className="inline-block mb-6">
             <div className="w-20 h-1 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full mx-auto"></div>
-          </motion.div>
+          </div>
 
-          <motion.h2
-            className="text-4xl md:text-6xl font-black text-transparent bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 bg-clip-text mb-6 leading-tight"
-            animate={{
-              backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"],
-            }}
-            transition={{
-              duration: 5,
-              repeat: Infinity,
-              ease: "linear",
-            }}
-          >
+          <h2 className="text-4xl md:text-6xl font-black text-transparent bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 bg-clip-text mb-6 leading-tight">
             Frequently Asked Questions
-          </motion.h2>
+          </h2>
 
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed"
-          >
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
             Everything you need to know about my services and how we can work together
-          </motion.p>
+          </p>
         </motion.div>
 
         <div className="space-y-6">
           {faqs.map((faq, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, y: 50, rotateX: -10 }}
-              whileInView={{ opacity: 1, y: 0, rotateX: 0 }}
-              viewport={{ once: false, margin: "-50px" }}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
               transition={{
-                duration: 0.6,
-                delay: index * 0.1,
-                type: "spring",
-                stiffness: 100,
-                damping: 20,
+                duration: 0.5,
+                delay: index * 0.05,
+                ease: "easeOut"
               }}
               className="group"
             >
-              <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-white/95 via-gray-50/95 to-white/90 backdrop-blur-xl border border-gray-200/50 shadow-2xl hover:shadow-cyan-500/30 transition-all duration-500">
+              <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-white/95 via-gray-50/95 to-white/90 backdrop-blur-xl border border-gray-200/50 shadow-2xl hover:shadow-cyan-500/30 transition-all duration-300 hover:scale-[1.01]">
                 <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10 blur-lg"></div>
                 <div className="absolute inset-[1px] bg-gradient-to-br from-white/95 via-gray-50/95 to-white/90 rounded-2xl"></div>
 
-                <div className="absolute top-4 right-4 w-12 h-12 bg-gradient-to-r from-cyan-400/20 to-blue-500/20 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div className="absolute top-4 right-4 w-12 h-12 bg-gradient-to-r from-cyan-400/20 to-blue-500/20 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
 
                 <div className="relative z-10 p-6">
-                  <motion.button
+                  <button
                     onClick={() => toggleFAQ(index)}
-                    whileHover={{ scale: 1.01 }}
-                    whileTap={{ scale: 0.99 }}
-                    className="w-full text-left flex justify-between items-start gap-4 group/button"
+                    className="w-full text-left flex justify-between items-start gap-4 group/button hover:scale-[1.01] transition-transform duration-200"
                   >
                     <div className="flex items-start gap-4 flex-1">
                       <div className="flex-1">
@@ -166,39 +133,33 @@ export default function FAQSection() {
                       </div>
                     </div>
 
-                    <motion.div
-                      animate={{ rotate: openIndex === index ? 45 : 0 }}
-                      transition={{ duration: 0.3, ease: "easeInOut" }}
-                      className="flex-shrink-0 w-10 h-10 bg-gradient-to-r from-gray-100 to-gray-200 group-hover/button:from-cyan-100 group-hover/button:to-blue-100 rounded-lg flex items-center justify-center shadow-sm"
+                    <div
+                      className={`flex-shrink-0 w-10 h-10 bg-gradient-to-r from-gray-100 to-gray-200 group-hover/button:from-cyan-100 group-hover/button:to-blue-100 rounded-lg flex items-center justify-center shadow-sm transition-all duration-300 ${
+                        openIndex === index ? 'rotate-45' : 'rotate-0'
+                      }`}
                     >
                       <span className="text-2xl font-light text-gray-600 group-hover/button:text-cyan-600 transition-colors duration-300">
                         +
                       </span>
-                    </motion.div>
-                  </motion.button>
+                    </div>
+                  </button>
 
                   <AnimatePresence>
                     {openIndex === index && (
                       <motion.div
-                        initial={{ opacity: 0, height: 0, y: -10 }}
-                        animate={{ opacity: 1, height: "auto", y: 0 }}
-                        exit={{ opacity: 0, height: 0, y: -10 }}
-                        transition={{ duration: 0.4, ease: "easeInOut" }}
+                        initial={{ opacity: 0, height: 0 }}
+                        animate={{ opacity: 1, height: "auto" }}
+                        exit={{ opacity: 0, height: 0 }}
+                        transition={{ duration: 0.3, ease: "easeInOut" }}
                         className="overflow-hidden"
                       >
                         <div className="pt-6 pl-6">
-                          <motion.div
-                            initial={{ opacity: 0 }}
-                            animate={{ opacity: 1 }}
-                            transition={{ delay: 0.2, duration: 0.3 }}
-                            className="relative"
-                          >
+                          <div className="relative">
                             <div className="absolute -left-4 top-2 w-4 h-0.5 bg-gradient-to-r from-cyan-400 to-blue-600 rounded-full"></div>
-
                             <p className="text-gray-700 text-base md:text-lg leading-relaxed font-medium">
                               {faq.answer}
                             </p>
-                          </motion.div>
+                          </div>
                         </div>
                       </motion.div>
                     )}
@@ -210,10 +171,10 @@ export default function FAQSection() {
         </div>
 
         <motion.div
-          initial={{ opacity: 0, y: 50 }}
+          initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.5 }}
-          viewport={{ once: false }}
+          transition={{ duration: 0.6, delay: 0.3 }}
+          viewport={{ once: true }}
           className="text-center mt-20"
         >
           <div className="inline-block p-8 rounded-3xl bg-gradient-to-br from-white/10 via-gray-100/10 to-white/5 backdrop-blur-xl border border-white/20">
@@ -223,13 +184,9 @@ export default function FAQSection() {
             <p className="text-gray-300 mb-6">
               Don't hesitate to reach out! I'm here to help with any inquiries.
             </p>
-            <motion.button
-              whileHover={{ scale: 1.05, y: -2 }}
-              whileTap={{ scale: 0.95 }}
-              className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-700 text-white font-semibold rounded-xl hover:shadow-lg hover:shadow-cyan-500/25 transition-all duration-300"
-            >
+            <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-700 text-white font-semibold rounded-xl hover:shadow-lg hover:shadow-cyan-500/25 transition-all duration-300 hover:scale-105 hover:-translate-y-1">
               Get In Touch
-            </motion.button>
+            </button>
           </div>
         </motion.div>
       </div>

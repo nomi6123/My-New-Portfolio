@@ -45,13 +45,7 @@ const About = () => {
                 <div className='relative bg-black/30 backdrop-blur-xl rounded-3xl overflow-hidden border border-white/10 shadow-2xl'>
                     {/* Header Section */}
                     <div className='text-center pt-12 pb-8 px-8'>
-                        <div className="inline-block p-1 rounded-full bg-gradient-to-r from-purple-600 to-pink-600 mb-6">
-                            <div className="bg-black/80 backdrop-blur-sm px-6 py-2 rounded-full">
-                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400 font-semibold text-sm tracking-wide uppercase">
-                                    Get To Know Me
-                                </span>
-                            </div>
-                        </div>
+                        
                         
                         <h1 className='text-4xl sm:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-white via-purple-200 to-purple-400 mb-8'>
                             About Me

@@ -27,13 +27,7 @@ const Education = () => {
         <div className="relative z-10 flex flex-col justify-center items-center min-h-screen py-16 px-6">
           {/* Header Section */}
           <div className="text-center mb-16">
-            <div className="inline-block p-1 rounded-full bg-gradient-to-r from-blue-600 to-cyan-600 mb-6">
-              <div className="bg-black/80 backdrop-blur-sm px-6 py-2 rounded-full">
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400 font-semibold text-sm tracking-wide uppercase">
-                  Academic Journey
-                </span>
-              </div>
-            </div>
+           
             <h2 className="text-5xl md:text-6xl font-bold text-white mb-4 tracking-tight">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-blue-200 to-blue-400">
                 My Education

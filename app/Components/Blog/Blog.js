@@ -81,13 +81,7 @@ export default function BlogPage() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <div className="inline-block p-1 rounded-full bg-gradient-to-r from-purple-600 to-pink-600 mb-6">
-            <div className="bg-black/80 backdrop-blur-sm px-6 py-2 rounded-full">
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400 font-semibold text-sm tracking-wide uppercase">
-                Latest Insights
-              </span>
-            </div>
-          </div>
+       
           <h1 className="text-6xl md:text-7xl font-bold text-white mb-4 tracking-tight">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-purple-200 to-purple-400">
               Blog
